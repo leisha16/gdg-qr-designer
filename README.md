@@ -1,6 +1,6 @@
 # 🎨 GDG QR Studio — Interactive QR Code Generator & Designer
 
-> **Google Developer Groups (GDG) on Campus SRM — Technical Domain Recruitments 2026–27**
+>
 
 > **Domain:** Frontend Development  
 > **Task:** QR Code Generator & Designer
@@ -19,7 +19,7 @@
 
 # 🌟 Overview
 
-**GDG QR Studio** is a modern, interactive, browser-based QR Code Generator and Designer developed for the **Google Developer Groups on Campus SRM Technical Domain Recruitment 2026–27**.
+**GDG QR Studio** is a modern, interactive, browser-based QR Code Generator and Designer
 
 The application allows users to generate, customize, preview, and download QR codes in real time without requiring a dedicated backend server for QR generation.
 
@@ -932,11 +932,9 @@ Core QR generation functionality should work directly within the browser.
 
 # 🎓 Academic Integrity
 
-This project is submitted in accordance with the **GDG on Campus SRM Technical Domain Recruitment guidelines**.
-
 The project repository contains the source code, documentation, deployment configuration, and screenshots required for evaluation.
 
-The implementation was developed specifically for this recruitment task.
+
 
 ---
 
@@ -966,23 +964,12 @@ The implementation was developed specifically for this recruitment task.
 
 🔗 [vercel.com/leisha3/gdg-qr-designer](https://vercel.com/leisha3/gdg-qr-designer)
 
----
 
-# 📬 Contact
-
-For queries regarding the recruitment task:
-
-**Email:** technical@gdgsrm.com
-
-**Organization:** Google Developer Groups on Campus,  
-SRM Institute of Science and Technology
-
----
 
 # ❤️ GDG QR Studio
 
 ### Interactive QR Code Generator & Designer
 
-Built for the **GDG on Campus SRM Technical Domain Recruitment 2026–27**.
+
 
 **Generate. Customize. Preview. Scan. 🚀**
