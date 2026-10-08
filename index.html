@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GDG QR Studio | Interactive QR Code Generator & Designer</title>
-  <meta name="description" content="Real-time client-side QR Code Generator & Designer built for GDG on Campus SRM Recruitments 2026-27." />
+  <meta name="description" content="Real-time client-side QR Code Generator & Designer." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234285F4'><rect width='24' height='24' rx='6' fill='%234285F4'/><path d='M7 7h3v3H7zm0 7h3v3H7zm7-7h3v3h-3zm2 9h-2v-2h2zm-2 2h2v-2h-2zm-5-2h1v2h-1zm0-3h2v1h-2z' fill='white'/></svg>" />
 
   <!-- Tailwind CSS -->
@@ -130,7 +130,7 @@
         id: 'gdg-brand',
         name: 'Google & GDG Signature',
         desc: 'Google Blue & Red gradient with rounded dots',
-        badge: 'Recruiter Pick',
+        badge: 'Popular',
         dotsColor: '#4285F4',
         bgColor: '#ffffff',
         dotType: 'rounded',
@@ -404,9 +404,9 @@
       const [urlData, setUrlData] = useState('https://gdgsrm.com');
       const [textData, setTextData] = useState('Welcome to Google Developer Groups on Campus, SRM Institute of Science and Technology!');
       const [emailData, setEmailData] = useState({
-        to: 'technical@gdgsrm.com',
-        subject: 'GDG Recruitments 2026-27 Query',
-        body: 'Hello GDG Technical Team, submitting my frontend recruitments task.'
+        to: 'hello@example.com',
+        subject: 'QR Code Email',
+        body: 'Hello, this is an example email generated with GDG QR Studio.'
       });
       const [phoneData, setPhoneData] = useState('+91 9876543210');
       const [wifiData, setWifiData] = useState({
@@ -421,7 +421,7 @@
         organization: 'GDG on Campus SRM',
         title: 'Technical Domain',
         phone: '+91 9876543210',
-        email: 'technical@gdgsrm.com',
+        email: 'hello@example.com',
         url: 'https://gdgsrm.com'
       });
 
@@ -871,45 +871,63 @@
             </div>
           )}
 
-          {/* HEADER / NAVIGATION */}
-          <header className="sticky top-0 z-40 bg-white/85 dark:bg-slate-900/85 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-rose-500 p-0.5 shadow-md flex items-center justify-center">
-                  <div className="w-full h-full bg-white dark:bg-slate-900 rounded-[10px] flex items-center justify-center">
-                    <Icon name="qrcode" className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                  </div>
-                </div>
-                <div>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">
-                    Interactive QR Code Generator & Designer
-                  </p>
-                </div>
-              </div>
+         {/* HEADER / NAVIGATION */}
+<header className="sticky top-0 z-40 bg-white/85 dark:bg-slate-900/85 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
 
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={resetToDefaults}
-                  title="Reset to Defaults"
-                  className="px-3 py-1.5 text-xs font-medium text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-xl transition-colors flex items-center gap-1.5"
-                >
-                  <Icon name="refresh" className="w-3.5 h-3.5" />
-                  <span className="hidden md:inline">Reset</span>
-                </button>
+    {/* Logo + Title */}
+    <div className="flex items-center gap-3">
 
-                <button
-                  onClick={() => setDarkMode(!darkMode)}
-                  title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
-                  className="p-2 text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-xl transition-colors"
-                >
-                  <Icon name={darkMode ? 'sun' : 'moon'} className="w-4 h-4" />
-                </button>
+      <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-rose-500 p-0.5 shadow-md flex items-center justify-center">
+        <div className="w-full h-full bg-white dark:bg-slate-900 rounded-[10px] flex items-center justify-center">
+          <Icon
+            name="qrcode"
+            className="w-5 h-5 text-blue-600 dark:text-blue-400"
+          />
+        </div>
+      </div>
 
-                
-            </div>
-          </header>
+      <div>
+        <h1 className="font-extrabold text-lg sm:text-xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-500 to-rose-500">
+          GDG QR Studio
+        </h1>
 
-          {/* MAIN APPLICATION WORKSPACE */}
+        <p className="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">
+          Interactive QR Code Generator & Designer
+        </p>
+      </div>
+
+    </div>
+
+    {/* Header Buttons */}
+       <div className="flex items-center gap-2">
+
+      <button
+        onClick={resetToDefaults}
+        title="Reset to Defaults"
+        className="px-3 py-1.5 text-xs font-medium text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-xl transition-colors flex items-center gap-1.5"
+      >
+        <Icon name="refresh" className="w-3.5 h-3.5" />
+        <span className="hidden md:inline">Reset</span>
+      </button>
+
+      <button
+        onClick={() => setDarkMode(!darkMode)}
+        title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+        className="p-2 text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-xl transition-colors"
+      >
+        <Icon
+          name={darkMode ? 'sun' : 'moon'}
+          className="w-4 h-4"
+        />
+      </button>
+
+           </div>
+
+           </div>
+         </header>
+
+        {/* MAIN APPLICATION WORKSPACE */}
           <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               
@@ -1035,7 +1053,7 @@
                               type="email"
                               value={emailData.to}
                               onChange={(e) => setEmailData({ ...emailData, to: e.target.value })}
-                              placeholder="technical@gdgsrm.com"
+                              placeholder="recipient@example.com"
                               className="block w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-xl text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
                             />
                           </div>
@@ -1047,7 +1065,7 @@
                               type="text"
                               value={emailData.subject}
                               onChange={(e) => setEmailData({ ...emailData, subject: e.target.value })}
-                              placeholder="e.g. GDG SRM Recruitment Application"
+                              placeholder="e.g. QR Code Email"
                               className="block w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-xl text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
                             />
                           </div>
@@ -1926,23 +1944,21 @@
 
                 </div>
 
-                {/* COMPLIANCE FOOTNOTE */}
-                <div className="p-4 rounded-3xl bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-900 dark:to-slate-800/80 border border-blue-100 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400 space-y-1.5">
-                  <div className="flex items-center gap-1.5 font-bold text-slate-800 dark:text-slate-200">
-                    <Icon name="shield" className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-                    <span>GDG on Campus SRM Recruitment Task Ready</span>
-                  </div>
-                  <p className="text-[11px] leading-relaxed">
-                    Compliant with 100% of frontend domain criteria: browser-only architecture, no backend required, local persistence, responsive design, contrast analyzer, and vector SVG exports.
-                  </p>
-                </div>
+
 
               </div>
 
             </div>
           </main>
 
-           
+          {/* FOOTER */}
+          <footer className="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 py-6 text-center text-xs text-slate-500 dark:text-slate-400">
+            <div className="max-w-7xl mx-auto px-4">
+              <p>GDG QR Studio • Interactive QR Code Generator &amp; Designer</p>
+            </div>
+          </footer>
+        </div>
+      );
     }
 
     const root = ReactDOM.createRoot(document.getElementById('root'));
